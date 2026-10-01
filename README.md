@@ -11,6 +11,7 @@ REVEAL interprets gene lists with an LLM pipeline that combines local gene datab
 ## Project Status
 
 - **Stage:** release-ready (in preparation). Version 0.1.0. REVEAL is runnable. The first release tag and the independent reproduction are not complete yet.
+- **Maintainer:** Isabelle Bond is responsible for the project in tkria. Send all questions and feedback to the maintainer.
 - **Repository:** [tkria/REVEAL](https://github.com/tkria/REVEAL) is the main repository for development. It is a one-time copy of [brettrj03/REVEAL](https://github.com/brettrj03/REVEAL), the original repository. The two repositories are not synchronised.
 - **Tests and CI:** `tests/test_smoke.py` contains smoke tests. The `ci` workflow runs them on Python 3.13. The `framework-check` workflow runs the TI framework check.
 - **Licence:** MIT. Refer to [LICENSE](LICENSE).
@@ -316,7 +317,7 @@ For a comparison, keep the `state.json` file of each run. It records the papers 
 
 ## Feedback Requested
 
-The project owner must confirm this list.
+The maintainer must confirm this list.
 
 - Is the gene interpretation correct and useful for rare disease genomics? Feedback from clinical and research geneticists is especially useful.
 - Which reference data releases must REVEAL use, and must they be pinned?
