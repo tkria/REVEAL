@@ -23,8 +23,8 @@ project_registry_url: ""
 mcp: not-applicable
 mcp_test_command: ""
 governance:
-  branch_protection_enabled: false
-  one_human_review_required: false
+  branch_protection_enabled: true
+  one_human_review_required: true
 release:
   tag: ""
   archive_status: planned
