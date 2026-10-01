@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use REVEAL, please cite it with the metadata in this file."
+type: software
+title: "REVEAL: Retrieval and Evidence-based Validated Interpretation Analysis for gene Lists"
+abstract: >-
+  REVEAL interprets gene lists with an LLM pipeline that combines local gene databases,
+  PubMed literature mining and AI synthesis, for rare disease genomics.
+authors:
+  - family-names: Brett
+    given-names: Rachael
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/tkria/REVEAL"
+keywords:
+  - bioinformatics
+  - gene-interpretation
+  - llm
+  - genomics
+  - rare-disease

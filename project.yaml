@@ -1,0 +1,35 @@
+# Source of truth for stage-aware framework checks.
+framework_version: "6.4"
+toolkit_version: "1.5.0"
+name: "REVEAL"
+objective: "REVEAL interprets gene lists with an LLM pipeline that combines local gene databases, PubMed literature mining and AI synthesis, for rare disease genomics."
+owner: "Isabelle Bond"
+stage: release-ready
+project_types:
+  - analysis
+status: experimental
+visibility: public
+reuse_status: runnable
+data_sensitivity: public
+# SPDX identifier or "Proprietary"; empty means the licence decision is still open.
+license: "MIT"
+main_entry_point: "streamlit run streamlit_app.py"
+validation_command: "python -m pytest tests/test_smoke.py"
+# GitHub metadata, completed by the framework skills after the repository exists.
+repository_url: "https://github.com/tkria/REVEAL"
+original_repository_url: "https://github.com/brettrj03/REVEAL"
+authoritative_repository_url: "https://github.com/tkria/REVEAL"
+project_registry_url: ""
+mcp: not-applicable
+mcp_test_command: ""
+governance:
+  branch_protection_enabled: false
+  one_human_review_required: false
+release:
+  tag: ""
+  archive_status: planned
+  independent_reproduction:
+    completed: false
+    reviewer: ""
+    date: ""
+exceptions: []
