@@ -7,7 +7,7 @@ name = "gene-insight-pipeline"
 version = "0.1.0"
 description = "REVEAL — LLM-powered gene function interpretation for rare disease genomics"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 license = {text = "MIT"}
 authors = [
     {name = "Gene Annotation Team"}
@@ -18,8 +18,7 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Bio-Informatics",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 
 dependencies = [
@@ -81,16 +80,16 @@ packages = ["src"]
 
 [tool.black]
 line-length = 100
-target-version = ['py311']
+target-version = ['py313']
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py313"
 select = ["E", "F", "I", "N", "W"]
 ignore = ["E501"]  # Line too long (handled by black)
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.13"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = false
