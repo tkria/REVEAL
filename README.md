@@ -12,7 +12,7 @@ REVEAL interprets gene lists with an LLM pipeline that combines local gene datab
 
 - **Stage:** release-ready (in preparation). Version 0.1.0. REVEAL is runnable. The first release tag and the independent reproduction are not complete yet.
 - **Repository:** [tkria/REVEAL](https://github.com/tkria/REVEAL) is the main repository for development. It is a one-time copy of [brettrj03/REVEAL](https://github.com/brettrj03/REVEAL), the original repository. The two repositories are not synchronised.
-- **Tests and CI:** `tests/test_smoke.py` contains smoke tests. The `ci` workflow runs them on Python 3.11, 3.12 and 3.13. The `framework-check` workflow runs the TI framework check.
+- **Tests and CI:** `tests/test_smoke.py` contains smoke tests. The `ci` workflow runs them on Python 3.13. The `framework-check` workflow runs the TI framework check.
 - **Licence:** MIT. Refer to [LICENSE](LICENSE).
 
 ## Features
@@ -35,7 +35,7 @@ REVEAL interprets gene lists with an LLM pipeline that combines local gene datab
 git clone https://github.com/tkria/REVEAL.git
 cd REVEAL
 
-# 2. Create virtual environment (Python 3.11+ required)
+# 2. Create virtual environment (Python 3.13+ required)
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
@@ -66,7 +66,7 @@ python run_stateful_pipeline.py "What is the functional role of MED12, EOMES, PE
 
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
-| Python | 3.11 | 3.11 or 3.12 |
+| Python | 3.13 | 3.13 |
 | RAM | 8 GB | 16 GB |
 | Disk Space | 10 GB | 20 GB |
 | OS | macOS 11+, Ubuntu 20.04+, Windows 10+ (WSL2 recommended) |
@@ -306,6 +306,7 @@ For a comparison, keep the `state.json` file of each run. It records the papers 
 ## Current Limitations
 
 - The automated tests are smoke tests only. No test checks the scientific output.
+- REVEAL needs Python 3.13 or later. On Python 3.11 and 3.12, the pipeline graph does not build (`NameError: name 'FetchAllGeneData' is not defined`), because the compatibility patch in `src/graph/gene_graph.py` applies only on Python 3.13 and later.
 - REVEAL uses OpenAI models only (`gpt-4.1-mini` by default). The LLM interpretations can be wrong, and an expert must review them.
 - The pipeline validation is an LLM check of LLM output.
 - The GO and NCBI Gene downloads use "current" URLs. The release label `2025-01` in `scripts/setup_database.py` does not identify the downloaded version. The retrieval date in [data/README.md](data/README.md) is the reliable reference.
