@@ -19,7 +19,7 @@ validation_command: "python -m pytest tests/test_smoke.py"
 repository_url: "https://github.com/tkria/REVEAL"
 original_repository_url: "https://github.com/brettrj03/REVEAL"
 authoritative_repository_url: "https://github.com/tkria/REVEAL"
-project_registry_url: ""
+project_registry_url: "https://github.com/tkria/translational-intelligence"
 mcp: not-applicable
 mcp_test_command: ""
 governance:
